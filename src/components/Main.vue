@@ -2,7 +2,11 @@
   <main>
      <div class="container">
        <div class="row">
-         card
+         <div class="div">
+           prova
+         </div>
+
+        
        </div>
     
     </div>
@@ -13,8 +17,18 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
-  name: 'Main'
+  name: 'Main',
+  data(){
+    return{
+      axios
+    }
+  },
+ created(){
+   console.log(axios);
+ }
+
 
 }
 </script>
