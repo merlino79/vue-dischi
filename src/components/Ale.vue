@@ -1,7 +1,6 @@
 <template>
-  <div class="coils">
-    prova aggancio
-
+  <div class="container">
+    ale
   </div>
 </template>
 
@@ -12,6 +11,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import '@/assets/styles/general.scss'
 
 </style>
