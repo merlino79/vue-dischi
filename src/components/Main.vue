@@ -2,7 +2,10 @@
   <main>
      <div class="container">
        <div class="row">
-         <div class="div">
+         <div class="div"
+         v-for="card in cards"
+         :key="card.poster"
+         >
            prova
          </div>
 
@@ -22,12 +25,23 @@ export default {
   name: 'Main',
   data(){
     return{
-      axios
+      axios,
+      cards:[],
+
     }
   },
  created(){
-   console.log(axios);
- }
+  // console.log(axios);
+  axios.get('https://flynn.boolean.careers/exercises/api/array/music')
+  .then(res =>{
+    this.card = res.data;
+    console.log(res.data);
+  })
+  .catch(err => {
+    console.log(err);
+  })
+ },
+
 
 
 }
