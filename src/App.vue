@@ -1,9 +1,13 @@
 <template>
   <div id="app">
-   
+    <div class="row">
     <Header />
     <Main />
     <Card />
+
+    </div>
+   
+   
 
   
    

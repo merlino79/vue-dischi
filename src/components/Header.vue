@@ -5,7 +5,9 @@
     <div class="row">
      <div class="div text-center">
       <img src="../assets/img/logo.jpg" alt="">
+     
      </div>
+   
       
     </div>
   </div>

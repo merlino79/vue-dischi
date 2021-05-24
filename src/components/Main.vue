@@ -1,14 +1,20 @@
 <template>
   <main>
-     <div class="container">
-       <div class="row">
-         <Card
-         v-for="(card, index) in cards"
-         :key="index"
-         :card="card"
+     <div class="container-fluid">
+       <div class="row " >
+         <div class="">
+            <Card
+            v-for="(card, index) in cards"
+            :key="index"
+             :card="card"
         
       
          />
+         
+
+         </div>
+        
+        
         
           
          
@@ -71,6 +77,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 
 
 </style>
