@@ -3,10 +3,13 @@
      <div class="container">
        <div class="row">
          <div class="div"
-         v-for="card in cards"
-         :key="card.poster"
+         v-for="(card, index) in cards"
+         :key="index"
          >
-           prova
+          <p>
+           {{card}}
+            
+          </p>
          </div>
 
         
@@ -34,8 +37,9 @@ export default {
   // console.log(axios);
   axios.get('https://flynn.boolean.careers/exercises/api/array/music')
   .then(res =>{
-    this.card = res.data;
-    console.log(res.data);
+    this.card = res.data.response;
+    this.cards.push(res.data.response)
+    console.log(res.data.response);
   })
   .catch(err => {
     console.log(err);
@@ -47,6 +51,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+p{
+  color: white;
+}
 
 </style>
