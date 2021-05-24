@@ -2,15 +2,24 @@
   <main>
      <div class="container">
        <div class="row">
-         <div class="div"
+         <Card
          v-for="(card, index) in cards"
          :key="index"
-         >
-          <p>
-           {{card}}
-            
-          </p>
-         </div>
+         :card="card"
+        
+      
+         />
+        
+          
+         
+         
+        
+         
+         
+          
+
+      
+     
 
         
        </div>
@@ -24,12 +33,22 @@
 
 <script>
 import axios from 'axios';
+import Card from '@/components/Card.vue';
+
+
 export default {
+ 
   name: 'Main',
+  components:{
+    Card
+  },
+
+  
   data(){
     return{
+      
       axios,
-      cards:[],
+       cards:[],
 
     }
   },
@@ -37,8 +56,8 @@ export default {
   // console.log(axios);
   axios.get('https://flynn.boolean.careers/exercises/api/array/music')
   .then(res =>{
-    this.card = res.data.response;
-    this.cards.push(res.data.response)
+    this.cards = res.data.response;
+    
     console.log(res.data.response);
   })
   .catch(err => {
@@ -52,8 +71,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-p{
-  color: white;
-}
 
 </style>

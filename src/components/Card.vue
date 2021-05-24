@@ -1,10 +1,17 @@
 <template>
-  <div class="container">
+ 
     <div class="row">
      
-
+   <img :src="card.poster" alt="">
+   <p>
+     {{card.title}}
+   </p>
+    
+    
+  
+    
     </div>
-  </div>
+
 </template>
 
 <script>
