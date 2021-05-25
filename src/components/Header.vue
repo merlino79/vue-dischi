@@ -29,6 +29,7 @@ header{
   height: 70px;
   width: 100%;
   background-color: #2E3A46;
+  margin-bottom: 30px;
   img{
     width: 50px;
     height: 50px;

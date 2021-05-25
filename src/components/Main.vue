@@ -1,8 +1,9 @@
 <template>
   <main>
-     <div class="container-fluid">
-       <div class="row " >
-         <div class="">
+     <div class="container">
+       <div class="row ">
+         <div class="flex-wrap   d-flex justify-content-center">
+
             <Card
             v-for="(card, index) in cards"
             :key="index"
@@ -10,6 +11,7 @@
         
       
          />
+         
          
 
          </div>
@@ -77,6 +79,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.row{
+  width: 100%;
+  height: 100%;
+  
+ 
+  
+
+}
+
 
 
 

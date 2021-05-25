@@ -1,26 +1,45 @@
 <template>
- 
-        <div class="row">
-          <div class="container-fluid">
-                 <div class="col-sm-6 col-md-4 col-lg-3 mb-5">
-          <img class="img-fluid mb-3 " :src="card.poster" alt="">
+
+    <div>
+     
+         <div class="  coils col-md-5 col-sm-4 col-lg-2 ms-2">
+          <img class=" mb-3 " :src="card.poster" alt="">
           <p>
+            {{card.author}}
             {{card.title}}
+            
           </p>
 
+    </div>
+     
+
+      
+     
+
+
+     
+
+</div>
+  
+
+ 
+ 
+   
+      
+        
+     
+         
         
          
-
-        </div>
-
-
-          </div>
-          
-         
-          </div>
-          
+        
   
+  
+
+ 
       
+
+
+        
 
    
      
@@ -45,18 +64,32 @@ export default {
 
 <style lang="scss" scoped>
 
-.row{
-  p{
+.coils{
+  img{
+   
+    height: 200px;
+  
+
+
+  
+    
+   
+   
+  }
+   p{
   color: white;
-}
-img{
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
+  width: 150px;
   
   
 }
+  
+  
+  
+  
+  
+  
+}
+
 
 
 
