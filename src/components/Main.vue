@@ -2,35 +2,21 @@
   <main>
      <div class="container">
        <div class="row ">
-         <div class="flex-wrap   d-flex justify-content-center">
+         <div class="v-if="!loading" flex-wrap   d-flex justify-content-center">
 
             <Card
             v-for="(card, index) in cards"
             :key="index"
-             :card="card"
+            :card="card"
         
       
          />
          
+        </div>
+         <div v-esle>Loading</div>
          
-
-         </div>
-        
-        
-        
-          
-         
-         
-        
-         
-         
-          
-
-      
-     
-
-        
-       </div>
+        </div>
+       
     
     </div>
 
@@ -57,6 +43,7 @@ export default {
       
       axios,
        cards:[],
+       loading: true,
 
     }
   },
@@ -65,6 +52,7 @@ export default {
   axios.get('https://flynn.boolean.careers/exercises/api/array/music')
   .then(res =>{
     this.cards = res.data.response;
+    this.loading = false;
     
     console.log(res.data.response);
   })
