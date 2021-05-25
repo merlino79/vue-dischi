@@ -2,20 +2,24 @@
   <main>
      <div class="container">
        <div class="row ">
-         <div class="v-if="!loading" flex-wrap   d-flex justify-content-center">
+          <Search class="mb-5" />
+         <div v-if="!loading" class=" flex-wrap   d-flex justify-content-center">
 
             <Card
             v-for="(card, index) in cards"
             :key="index"
             :card="card"
-        
+         
       
          />
-         
+        
         </div>
-         <div v-esle>Loading</div>
+        
+        <Loader v-else />
+       
+       </div>  
          
-        </div>
+     
        
     
     </div>
@@ -28,13 +32,19 @@
 <script>
 import axios from 'axios';
 import Card from '@/components/Card.vue';
+import Loader from '@/components/Loader.vue';
+import Search from '@/components/Search.vue';
+
 
 
 export default {
  
   name: 'Main',
   components:{
-    Card
+    Card,
+    Loader,
+    Search,
+    
   },
 
   
@@ -43,7 +53,7 @@ export default {
       
       axios,
        cards:[],
-       loading: true,
+       loading:true,
 
     }
   },
@@ -52,7 +62,7 @@ export default {
   axios.get('https://flynn.boolean.careers/exercises/api/array/music')
   .then(res =>{
     this.cards = res.data.response;
-    this.loading = false;
+     this.loading = false;
     
     console.log(res.data.response);
   })
