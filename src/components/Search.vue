@@ -1,9 +1,13 @@
 <template>
-  <div class="container">
-    <input type="text">
-    ciao
+  <div >
+    <form class="d-flex mb-5 mt-5 ">
+      <div class="flex-grow-1 ">
 
-  </div>
+        <input class="form-control" type="text" placeholder="search....">
+        
+      </div>
+    </form>
+   </div>
 </template>
 
 <script>
